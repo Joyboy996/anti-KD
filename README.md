@@ -1,2 +1,1 @@
-# anti-KD
-Anti KD inforgraphic page
+joyboy996.github.io/anti-KD

@@ -1,1 +1,1 @@
-joyboy996.github.io/anti-KD
+joyboy996.github.io/anti-KD-inforgraphic

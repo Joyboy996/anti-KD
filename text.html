@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuộc chiến trong kỷ nguyên AI: Ngăn chặn chưng cất dữ liệu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 40vh;
+            max-height: 450px;
+            min-height: 320px;
+        }
+        .text-neon-cyan { color: #06b6d4; }
+        .text-neon-pink { color: #ec4899; }
+        .text-neon-purple { color: #8b5cf6; }
+        .bg-card { background-color: #1e293b; }
+        .border-neon { border: 1px solid rgba(6, 182, 212, 0.3); }
+        .glow-box { box-shadow: 0 0 20px rgba(139, 92, 246, 0.15); }
+    </style>
+</head>
+<body class="antialiased min-h-screen pb-20">
+
+    <div class="max-w-4xl mx-auto px-6 pt-12">
+        <div class="bg-card border-neon rounded-xl p-8 mb-12 glow-box">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+                Tiêu đề: Cuộc chiến trong kỷ nguyên AI: ngăn chặn việc chưng cất dữ liệu (KD) - mâu thuẫn nằm trong toán học
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300 text-sm">
+                <div><strong class="text-slate-100">Ngày báo cáo:</strong> 04/03/2026</div>
+                <div><strong class="text-slate-100">Độ dài:</strong> Bài phân tích chuyên sâu</div>
+                <div><strong class="text-slate-100">Phạm vi:</strong> An ninh hệ thống, Kinh tế học AI, Pháp lý</div>
+                <div><strong class="text-slate-100">Tác giả:</strong> Xuân Đi Chậm (Nguyễn Trường Xuân)</div>
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-4 text-neon-cyan flex items-center gap-2">
+                <span>🌐</span> 1. Tái khẳng định nghịch lý cốt lõi của cuộc chiến AI
+            </h2>
+            <p class="text-slate-300 leading-relaxed mb-4 text-lg">
+                Cuộc cạnh tranh trí tuệ nhân tạo toàn cầu hiện nay thường được giới truyền thông và các nhà hoạch định chính sách nhìn nhận dưới lăng kính địa chính trị và sự thống trị về phần cứng. Các lệnh kiểm soát chip, những hạn chế ngặt nghèo trong việc tiếp cận GPU, hay các lệnh cấm xuất khẩu thiết bị bán dẫn tiên tiến được xem là rào cản phòng thủ tuyến đầu. Tuy nhiên, sự tập trung vào cơ sở hạ tầng vật lý đã làm lu mờ một lớp sâu hơn, phức tạp hơn của cuộc chiến: lớp toán học cấu thành nên các thuật toán, kiến trúc mô hình và phương pháp học máy.
+            </p>
+            <p class="text-slate-300 leading-relaxed text-lg">
+                Nghịch lý lớn nhất ở đây là trong khi những con chip silicon có biên giới vật lý rõ ràng và có thể bị chặn lại tại hải quan, thì toán học lại hoàn toàn vô hình và không biên giới. Khi một mô hình tiên phong (frontier model) được thương mại hóa và cung cấp ra công chúng thông qua API, "toán học" nội tại của nó bắt đầu rò rỉ và chảy ra bên ngoài thông qua các luồng câu trả lời liên tục. Đây là khởi nguồn của vấn đề chưng cất dữ liệu (Knowledge Distillation - KD) đang làm đau đầu các phòng thí nghiệm AI hàng đầu.
+            </p>
+        </div>
+
+        <div class="mb-16 bg-card p-8 rounded-2xl glow-box border border-slate-700">
+            <h2 class="text-2xl font-bold mb-6 text-neon-pink flex items-center gap-2">
+                <span>🚪</span> 2. API – "Cửa khẩu tự nguyện" của tri thức mô hình
+            </h2>
+            <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                Sự phát triển của các nền tảng AI đi kèm với một nghịch lý mang tính sinh tử: để duy trì hoạt động kinh doanh, bù đắp chi phí huấn luyện khổng lồ và phổ cập công nghệ, họ buộc phải mở cửa API. Tuy nhiên, API không đơn thuần là một kênh giao tiếp phần mềm; trong bối cảnh AI, nó thực chất là cổng xuất khẩu năng lực trí tuệ của mô hình. Khác với việc vận chuyển một lô chip cần logistics vật lý, việc dịch chuyển tri thức qua API chỉ cần một lệnh HTTP request đơn giản.
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-between bg-slate-900 p-6 rounded-xl border border-slate-700 my-8">
+                <div class="text-center p-4">
+                    <div class="text-4xl mb-2">🧠</div>
+                    <div class="font-bold text-cyan-400">Frontier Model</div>
+                    <div class="text-xs text-slate-400 mt-1">Sở hữu hàng nghìn tỷ tham số</div>
+                </div>
+                <div class="flex flex-col items-center justify-center py-4 md:py-0">
+                    <div class="text-slate-400 text-sm mb-1">HTTP Request</div>
+                    <div class="text-2xl text-pink-500">➔</div>
+                    <div class="text-slate-400 text-sm mt-1">Cửa khẩu API</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl mb-2">📊</div>
+                    <div class="font-bold text-purple-400">Dữ liệu đầu ra</div>
+                    <div class="text-xs text-slate-400 mt-1">Câu trả lời có cấu trúc cao</div>
+                </div>
+                <div class="flex flex-col items-center justify-center py-4 md:py-0">
+                    <div class="text-slate-400 text-sm mb-1">Chưng cất (KD)</div>
+                    <div class="text-2xl text-pink-500">➔</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl mb-2">🤖</div>
+                    <div class="font-bold text-emerald-400">Clone Model</div>
+                    <div class="text-xs text-slate-400 mt-1">Sao chép năng lực với chi phí thấp</div>
+                </div>
+            </div>
+
+            <p class="text-slate-300 leading-relaxed text-lg">
+                Sơ đồ trên minh họa cho hệ quả cốt lõi: giới nghiên cứu và đối thủ cạnh tranh không cần phải đánh cắp quyền truy cập vào model weights hay mã nguồn nội bộ. Họ chỉ cần đủ số lượng truy vấn và một kho dữ liệu đầu ra chất lượng cao. Từ đó, hoạt động "model distillation" (chưng cất mô hình) được sinh ra và nhanh chóng mở rộng ở quy mô công nghiệp, cho phép một mô hình nhỏ hơn, rẻ hơn học lại chính xác cách tư duy và xuất bản văn bản của hệ thống tỷ đô.
+            </p>
+        </div>
+
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-neon-purple flex items-center gap-2">
+                <span>🛡️</span> 3. Vì sao "tường lửa kỹ thuật" không thể giải quyết triệt để
+            </h2>
+            <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                Đứng trước nguy cơ mất cắp chất xám qua API, phản ứng đầu tiên của các kỹ sư luôn là xây dựng "tường lửa". Các biện pháp kỹ thuật kinh điển thường được triển khai bao gồm: thiết lập giới hạn tốc độ truy vấn (rate limits), thuật toán phát hiện bot, nhúng watermark vào văn bản, và rà soát API key khắt khe. Dù vậy, các lớp giáp này đều thất bại trước ba rào cản mang tính bản chất.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-slate-100">3.1. Vấn đề của quy mô</h3>
+                    <p class="text-slate-400 mb-6">
+                        Một chiến dịch chưng cất dữ liệu quy mô lớn không hoạt động như một cuộc tấn công DDoS thô sơ. Chúng sử dụng mạng lưới hàng chục nghìn tài khoản hợp lệ, phân tán qua hàng trăm proxy tại nhiều quốc gia khác nhau. Về mặt thống kê và phân tích tín hiệu, hành vi của một mạng lưới scraping tinh vi gần như không thể phân biệt với lưu lượng truy cập của một tập hợp người dùng thật đang làm việc đồng thời.
+                    </p>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-slate-100">3.2. Bản chất dịch vụ & 3.3. Toán học</h3>
+                    <p class="text-slate-400">
+                        Hơn nữa, API sinh ra là để phục vụ truy vấn và cung cấp tri thức. Nếu áp dụng các bộ lọc quá nghiêm ngặt để chặn bot, dịch vụ sẽ đánh mất giá trị trải nghiệm cốt lõi, khiến người dùng doanh nghiệp hợp pháp bị ảnh hưởng nặng nề. Một API quá an toàn đồng nghĩa với một API vô dụng. Ở khía cạnh toán học, chỉ cần đầu ra phản ánh chính xác phân phối xác suất của mô hình gốc, nó tự động trở thành một tập dữ liệu huấn luyện hoàn hảo. Sự sao chép năng lực (model extraction) hoàn toàn là một quá trình toán học tất yếu, vượt ngoài tầm với của các bản vá bảo mật truyền thống.
+                    </p>
+                </div>
+                
+                <div class="bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-700">
+                    <p class="text-center text-sm text-slate-400 mb-4 font-semibold uppercase tracking-wider">Mức độ tương đồng hành vi: Bot vs Người thật</p>
+                    <div class="chart-container">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-slate-500 mt-4 italic">Đồ thị thể hiện sự bám sát của các chiến dịch KD tinh vi so với hành vi người dùng hợp lệ, khiến việc chặn lọc bằng kỹ thuật thông thường gây ra tỷ lệ "Dương tính giả" (False Positive) rất cao.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-neon-cyan flex items-center gap-2">
+                <span>💰</span> 4. Thực tế: Phòng thủ dịch chuyển sang Kinh tế học
+            </h2>
+            <p class="text-slate-300 leading-relaxed mb-8 text-lg">
+                Khi nhận ra tường lửa kỹ thuật là một cuộc đua không hồi kết và không thể giành chiến thắng tuyệt đối, các trung tâm nghiên cứu AI hàng đầu đã chuyển hướng chiến lược sang một mặt trận thực tế hơn: Kinh tế học. Mục tiêu phòng thủ không còn là "chặn đứng hoàn toàn" việc chưng cất dữ liệu, mà là thiết kế hệ thống sao cho việc chưng cất trở nên tốn kém đến mức không còn giá trị kinh tế.
+            </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-8">
+                <div class="bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-700 order-2 lg:order-1">
+                     <p class="text-center text-sm text-slate-400 mb-4 font-semibold uppercase tracking-wider">Chi phí chưng cất gia tăng qua các màng lọc</p>
+                    <div class="chart-container">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                     <p class="text-center text-xs text-slate-500 mt-4 italic">Thông qua phân tầng giá và kiểm soát lưu lượng động, các nhà cung cấp đẩy chi phí thu thập tập dữ liệu đủ lớn lên mức tiệm cận việc tự huấn luyện mô hình.</p>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        Bằng cách áp dụng rate limit thông minh thay đổi theo thời gian thực, thuật toán phân tích hành vi truy vấn chuyên sâu, và cấu trúc định giá (pricing tier) phạt nặng các luồng truy vấn mang tính hệ thống, các nhà cung cấp nền tảng đánh trực tiếp vào bài toán chi phí - lợi nhuận của kẻ đánh cắp. Nếu chi phí để gọi API lấy đủ hàng triệu cặp dữ liệu nhằm tinh chỉnh một mô hình nhỏ vượt quá chi phí tự tổ chức nghiên cứu, hành vi chưng cất sẽ tự động bị loại bỏ bởi cơ chế thị trường.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div>
+                <h2 class="text-2xl font-bold mb-6 text-neon-pink flex items-center gap-2">
+                    <span>🎲</span> 5. Lớp phòng thủ: Xác suất và Phát hiện
+                </h2>
+                <p class="text-slate-300 leading-relaxed text-lg mb-4">
+                    Song song với rào cản kinh tế, một hệ thống phòng thủ tinh vi dựa trên toán xác suất đang được hình thành. Các nhà phát triển bắt đầu nhúng các watermark ẩn sâu vào cấu trúc phân phối từ vựng ở đầu ra, hoặc sử dụng các canary tokens (những mẫu dữ liệu đặc trưng đóng vai trò như mồi nhử) vào trong các câu trả lời. 
+                </p>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    Các công cụ này hoàn toàn bất lực trong việc cản trở quá trình copy dữ liệu trực tiếp, nhưng chúng giải quyết bài toán cốt lõi thứ hai: cung cấp khả năng phát hiện độ trễ. Phòng thủ lúc này chuyển hóa thành bài toán xác suất thống kê. Nhà cung cấp chấp nhận việc dữ liệu có thể bị lấy đi, nhưng gia tăng tối đa xác suất có thể truy vết ngược nguồn gốc nếu đối thủ mang mô hình đã chưng cất ra thị trường.
+                </p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl font-bold mb-6 text-emerald-400 flex items-center gap-2">
+                    <span>⚖️</span> 6. Pháp lý: Lớp bảo vệ cuối cùng
+                </h2>
+                <p class="text-slate-300 leading-relaxed text-lg mb-4">
+                    Khi kỹ thuật có lỗ hổng, kinh tế có thể bị vượt qua bởi các thực thể có ngân sách khổng lồ, và xác suất chỉ mang tính phát hiện, thì luật pháp là thành trì cuối cùng. Cuộc chiến chưng cất dữ liệu đang dần dịch chuyển trọng tâm vào phòng xử án.
+                </p>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    Các nền tảng hàng đầu hiện nay đã cập nhật Điều khoản Dịch vụ (Terms of Service) với các quy định cấm tuyệt đối việc sử dụng đầu ra (output) để huấn luyện hoặc vi chỉnh các mô hình cạnh tranh. Kết hợp với bằng chứng xác suất từ watermark, các công ty AI có cơ sở để thực hiện các cuộc điều tra truy vết scraping quy mô lớn và khởi kiện các tổ chức vi phạm. Bản chất của cuộc cạnh tranh toán học dần được đóng khung lại trong các ranh giới của quyền sở hữu trí tuệ thương mại.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-16 bg-slate-800 p-8 rounded-2xl glow-box border border-slate-700">
+             <h3 class="text-xl font-bold mb-6 text-center text-slate-100 uppercase tracking-widest">Tỷ trọng các lớp phòng thủ trong hệ sinh thái AI hiện đại</h3>
+             <div class="chart-container" style="max-height: 350px;">
+                <canvas id="doughnutChart"></canvas>
+            </div>
+             <p class="text-center text-sm text-slate-400 mt-6">Biểu đồ minh họa sự dịch chuyển chiến lược: Kỹ thuật thuần túy chỉ còn đóng vai trò nhỏ, nhường chỗ cho các rào cản Kinh tế học và cơ chế truy vết Xác suất.</p>
+        </div>
+
+        <div class="mt-20 border-t border-slate-700 pt-12 pb-8">
+            <h2 class="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 flex items-center gap-2">
+                <span>🌌</span> 7. Kết luận triết học: Cuộc chiến không có biên giới
+            </h2>
+            <p class="text-slate-300 leading-relaxed text-xl mb-6 font-light">
+                Nhìn bao quát lại toàn bộ bối cảnh, chúng ta phải đối diện với nghịch lý triết học sâu sắc nhất của thời đại công nghệ số: <strong class="text-white font-semibold">Phần cứng có thể bị kiểm soát bởi các hiệp ước địa chính trị, nhưng tri thức tính toán thì hoàn toàn không.</strong>
+            </p>
+            <p class="text-slate-300 leading-relaxed text-lg mb-6">
+                Giây phút một mô hình frontier mở API cho người dùng, nó đã chính thức bước ra khỏi cánh cửa an toàn của phòng thí nghiệm để hòa mình vào một hệ sinh thái toàn cầu hỗn mang. Trong hệ sinh thái số này, khái niệm về biên giới vật lý trở nên vô nghĩa, và không tồn tại bất kỳ một bức tường lửa nào hoàn hảo để giữ kín luồng tư duy toán học thuần túy.
+            </p>
+            <p class="text-slate-300 leading-relaxed text-lg mb-8">
+                Chiến lược phòng thủ kho tàng trí tuệ nhân tạo ngày nay đã vượt quá giới hạn hiểu biết của những kỹ sư phần mềm hay nhà khoa học máy tính đơn thuần. Nó đòi hỏi một kiến trúc đa tầng, hòa quyện giữa độ phức tạp của <span class="text-neon-cyan font-semibold">Toán học</span>, sự khắc nghiệt của rào cản <span class="text-neon-pink font-semibold">Kinh tế học</span>, độ chính xác của <span class="text-neon-purple font-semibold">Xác suất thống kê</span>, và sức mạnh cưỡng chế của <span class="text-emerald-400 font-semibold">Pháp lý quốc tế</span>.
+            </p>
+            
+            <div class="bg-slate-900 border-l-4 border-pink-500 p-6 rounded-r-lg">
+                <p class="text-xl text-slate-100 font-semibold italic">
+                    "Và đó có lẽ là nghịch lý lớn nhất của kỷ nguyên AI: Càng nỗ lực thương mại hóa và phổ biến trí tuệ nhân tạo đến với nhân loại, chúng ta càng làm cho bản thể trí tuệ đó trở nên bất khả thi trong việc kiểm soát cục bộ."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wrapText = (text) => {
+            if (text.length <= 16) return text;
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > 16) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine += (currentLine ? ' ' : '') + word;
+                }
+            });
+            if (currentLine) lines.push(currentLine.trim());
+            return lines.length > 1 ? lines : lines[0];
+        };
+
+        const globalTooltipOptions = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            },
+            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+            titleColor: '#f8fafc',
+            bodyColor: '#cbd5e1',
+            borderColor: '#334155',
+            borderWidth: 1,
+            padding: 12
+        };
+
+        const ctxRadar = document.getElementById('radarChart').getContext('2d');
+        const labelsRadar = ['Đa dạng dải địa chỉ IP', 'Biến thiên thời gian gọi', 'Cấu trúc ngôn ngữ truy vấn', 'Phân bổ chủ đề học thuật', 'Tỷ lệ lỗi cú pháp API'].map(wrapText);
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: labelsRadar,
+                datasets: [
+                    {
+                        label: 'Hành vi Người thật',
+                        data: [85, 90, 75, 88, 60],
+                        borderColor: '#06b6d4',
+                        backgroundColor: 'rgba(6, 182, 212, 0.2)',
+                        pointBackgroundColor: '#06b6d4',
+                        pointBorderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Mạng lưới Bot chưng cất',
+                        data: [80, 85, 80, 82, 55],
+                        borderColor: '#ec4899',
+                        backgroundColor: 'rgba(236, 72, 153, 0.2)',
+                        pointBackgroundColor: '#ec4899',
+                        pointBorderColor: '#fff',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: globalTooltipOptions,
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#cbd5e1', padding: 20, font: { family: 'Inter', size: 13 } }
+                    }
+                },
+                scales: {
+                    r: {
+                        ticks: { display: false },
+                        grid: { color: 'rgba(51, 65, 85, 0.5)' },
+                        pointLabels: { color: '#f8fafc', font: { family: 'Inter', size: 12 } },
+                        angleLines: { color: 'rgba(51, 65, 85, 0.5)' }
+                    }
+                }
+            }
+        });
+
+        const ctxBar = document.getElementById('barChart').getContext('2d');
+        const labelsBar = ['Chưa phòng thủ kỹ thuật', 'Giới hạn tốc độ cơ bản (Rate Limit)', 'Phân tích & Chặn Bot chủ động', 'Phân tầng giá (Pricing Tier) khắc nghiệt'].map(wrapText);
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: labelsBar,
+                datasets: [{
+                    label: 'Đơn vị chi phí tương đối',
+                    data: [10, 25, 65, 100],
+                    backgroundColor: ['#8b5cf6', '#3b82f6', '#06b6d4', '#ec4899'],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: globalTooltipOptions,
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(51, 65, 85, 0.3)' },
+                        ticks: { color: '#94a3b8', font: { family: 'Inter' } },
+                        title: { display: true, text: 'Mức độ tốn kém', color: '#64748b' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#cbd5e1', font: { family: 'Inter', size: 12 } }
+                    }
+                }
+            }
+        });
+
+        const ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+        const labelsDoughnut = ['Rào cản Kỹ thuật (Bot, IP)', 'Đòn bẩy Kinh tế học (Giá, Rate Limit)', 'Phát hiện Xác suất (Watermark)', 'Chế tài Pháp lý (ToS, Kiện tụng)'].map(wrapText);
+        new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: labelsDoughnut,
+                datasets: [{
+                    data: [15, 45, 20, 20],
+                    backgroundColor: ['#3b82f6', '#ec4899', '#8b5cf6', '#10b981'],
+                    borderColor: '#1e293b',
+                    borderWidth: 2,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: globalTooltipOptions,
+                    legend: {
+                        position: 'right',
+                        labels: { color: '#f8fafc', padding: 15, font: { family: 'Inter', size: 14 } }
+                    }
+                },
+                cutout: '65%'
+            }
+        });
+    </script>
+</body>
+</html>
